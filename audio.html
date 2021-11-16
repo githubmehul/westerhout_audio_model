@@ -9,7 +9,9 @@
 	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 	<!-- include ar.js for A-Frame -->
 	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-	
+	<!-- include gesture.js for 3D model interactivity -->
+    <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,21 +22,31 @@
 
 <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded arjs="debugUIEnabled: false; trackingMethod: best;"
-			 renderer="logarithmicDepthBuffer: true">
+			 renderer="logarithmicDepthBuffer: true"
+             gesture-detector> 
 			 
 			 
         <!-- define a marker to detect the 3d object-->
-        <a-marker preset='custom' type='pattern' url='Augmented_Reality\MarkerCustom\pattern-Westerhout.patt'>
+        <a-marker preset="hiro"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerA">
 		
 		<a-entity gltf-model="https://raw.githubusercontent.com/githubmehul/Augmented-Reality-Implementation/main/Sheath%203D%20model/sheath.gltf" 
 				  scale="0.4 0.4 0.4" 
 				  position="0.2 0 -0.5" 
 				  rotation="-90 0 0"
+                  class="clickable"
+                  gesture-handler
 				  ></a-entity>
 		<a-entity gltf-model="https://cdn.glitch.me/a1f1711d-0847-4ca2-822e-1f6dd0513009%2FSword.gltf?v=1636947243511" 
 				  scale="0.1 0.1 0.1" 
 				  position="-0.5 0 -0.5" 
-				  rotation="-90 0 0"></a-entity>
+				  rotation="-90 0 0"
+                  class="clickable"
+                  gesture-handler
+                  ></a-entity>
 		</a-marker>
 		<a-entity camera></a-entity>
 
