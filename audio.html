@@ -27,11 +27,7 @@
 			 
 			 
         <!-- define a marker to detect the 3d object-->
-        <a-marker preset="hiro"
-        raycaster="objects: .clickable"
-        emitevents="true"
-        cursor="fuse: false; rayOrigin: mouse;"
-        id="markerA">
+        <a-marker preset='custom' type='pattern' url='Augmented_Reality\MarkerCustom\pattern-Westerhout.patt'>
 		
 		<a-entity gltf-model="https://raw.githubusercontent.com/githubmehul/Augmented-Reality-Implementation/main/Sheath%203D%20model/sheath.gltf" 
 				  scale="0.4 0.4 0.4" 
