@@ -23,26 +23,22 @@
 <body style='margin : 0px; overflow: hidden;'>
     <a-scene embedded arjs="debugUIEnabled: false; trackingMethod: best;"
 			 renderer="logarithmicDepthBuffer: true"
-             gesture-detector> 
-			 
-			 
+             gesture-detector>
+
+
         <!-- define a marker to detect the 3d object-->
-        <a-marker preset="hiro"
-        raycaster="objects: .clickable"
-        emitevents="true"
-        cursor="fuse: false; rayOrigin: mouse;"
-        id="markerA">
-		
-		<a-entity gltf-model="https://raw.githubusercontent.com/githubmehul/Augmented-Reality-Implementation/main/Sheath%203D%20model/sheath.gltf" 
-				  scale="0.4 0.4 0.4" 
-				  position="0.2 0 -0.5" 
+        <a-marker-camera preset='hiro'></a-marker-camera>
+
+		<a-entity gltf-model="https://raw.githubusercontent.com/githubmehul/Augmented-Reality-Implementation/main/Sheath%203D%20model/sheath.gltf"
+				  scale="0.4 0.4 0.4"
+				  position="0.2 0 -0.5"
 				  rotation="-90 0 0"
                   class="clickable"
                   gesture-handler
 				  ></a-entity>
-		<a-entity gltf-model="https://cdn.glitch.me/a1f1711d-0847-4ca2-822e-1f6dd0513009%2FSword.gltf?v=1636947243511" 
-				  scale="0.1 0.1 0.1" 
-				  position="-0.5 0 -0.5" 
+		<a-entity gltf-model="https://cdn.glitch.me/a1f1711d-0847-4ca2-822e-1f6dd0513009%2FSword.gltf?v=1636947243511"
+				  scale="0.1 0.1 0.1"
+				  position="-0.5 0 -0.5"
 				  rotation="-90 0 0"
                   class="clickable"
                   gesture-handler
