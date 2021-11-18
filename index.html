@@ -27,7 +27,7 @@
 
 
         <!-- define a marker to detect the 3d object-->
-        <a-marker-camera preset='hiro'></a-marker-camera>
+        <a-marker-camera preset='custom' type='pattern' url='https://raw.githubusercontent.com/githubmehul/westerhout_audio_model/main/Pattern/pattern-Westerhout.patt'></a-marker-camera>
 
 		<a-entity gltf-model="https://raw.githubusercontent.com/githubmehul/Augmented-Reality-Implementation/main/Sheath%203D%20model/sheath.gltf"
 				  scale="0.4 0.4 0.4"
@@ -43,9 +43,6 @@
                   class="clickable"
                   gesture-handler
                   ></a-entity>
-		</a-marker>
-		<a-entity camera></a-entity>
-
         <div class="wrapper" id="app">
             <div class="player">
                 <div class="player__top">
