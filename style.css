@@ -23,6 +23,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     background-size: cover;
+    margin-top: 30px;
   }
   @media screen and (max-width: 900px), (max-height: 900px) {
     .wrapper {
