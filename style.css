@@ -9,8 +9,8 @@ body {
   
   .icon {
     display: inline-block;
-    width: 1em;
-    height: 1em;
+    width: 10vw;
+    height: 10vh;
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
@@ -24,9 +24,9 @@ body {
     min-height: 100vh;
     background-size: cover;
   }
-  @media screen and (max-width: 700px), (max-height: 500px) {
+  @media screen and (max-width: 900px), (max-height: 900px) {
     .wrapper {
-      flex-wrap: wrap;
+      /* flex-wrap: wrap; */
       justify-content: right;
     }
   }
@@ -34,7 +34,7 @@ body {
   .player {
     background: #eef3f7;
     width: 410px;
-    min-height: 480px;
+    min-height: 580px;
     box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
     border-radius: 15px;
     padding: 30px;
@@ -42,11 +42,11 @@ body {
   @media screen and (max-width: 576px), (max-height: 500px) {
     .player {
       width: 50%;
-      padding: 20px;
-      margin-top: 20%;
+      padding: 10px;
+      margin-top: 10px;
       min-height: initial;
       padding-bottom: 0px;
-      max-width: 350px;
+      max-width: 250px;
     }
   }
   .player__top {
@@ -72,10 +72,8 @@ body {
   }
   @media screen and (max-width: 576px), (max-height: 500px) {
     .player-cover {
-      margin-top: -70px;
-      margin-bottom: 25px;
-      width: 260px;
-      height: 180px;
+      width: 160px;
+      height: 80px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -86,12 +84,12 @@ body {
     background-size: cover;
     width: 100%;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 10px;
     position: absolute;
     left: 0;
     top: 0;
   }
-  .player-cover__item:before {
+  /* .player-cover__item:before {
     content: "";
     background: inherit;
     width: 100%;
@@ -105,7 +103,7 @@ body {
     filter: blur(10px);
     opacity: 0.9;
     border-radius: 15px;
-  }
+  } */
   .player-cover__item:after {
     content: "";
     background: inherit;
@@ -136,9 +134,8 @@ body {
   @media screen and (max-width: 576px), (max-height: 500px) {
     .player-controls {
       flex-direction: row;
-      padding-left: 0;
-      width: 100%;
-      
+      padding-right: 0;
+      width: 100%;  
     }
   }
   .player-controls__item {
@@ -159,7 +156,7 @@ body {
     .player-controls__item {
       font-size: 26px;
       padding: 10px;
-      margin-right: 10px;
+      margin-right: 0;
       color: #acb8cc;
       cursor: pointer;
       width: 40px;
@@ -183,6 +180,7 @@ body {
   @media screen and (min-width: 500px) {
     .player-controls__item:hover {
       color: #532ab9;
+      border-radius: 95%;
     }
     .player-controls__item:hover::before {
       opacity: 1;
@@ -192,6 +190,7 @@ body {
   @media screen and (max-width: 576px), (max-height: 500px) {
     .player-controls__item:active {
       color: #532ab9;
+      border-radius: 50%;
     }
     .player-controls__item:active::before {
       opacity: 1;
@@ -204,17 +203,17 @@ body {
   }
   .player-controls__item.-xl {
     margin-bottom: 0;
-    font-size: 95px;
+    font-size: 65px;
     filter: drop-shadow(0 11px 6px rgba(172, 184, 204, 0.45));
-    color: #fff;
+    color: rgb(240, 152, 152);
     width: auto;
     height: auto;
     display: inline-flex;
   }
   @media screen and (max-width: 576px), (max-height: 500px) {
     .player-controls__item.-xl {
-      margin-left: auto;
-      font-size: 75px;
+      margin-left: -10px;
+      font-size: 10px;
       margin-right: 0;
     }
   }
@@ -223,6 +222,10 @@ body {
   }
   .player-controls__item.-favorite.active {
     color: red;
+  }
+
+  .player-controls__item.-favorite {
+    margin-right: 10px;
   }
   
   [v-cloak] {
@@ -246,19 +249,19 @@ body {
   .progress__duration {
     color: #71829e;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 12px;
     opacity: 0.5;
   }
   .progress__time {
     margin-top: 2px;
     color: #71829e;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 12px;
     opacity: 0.7;
   }
   
   .progress__bar {
-    height: 6px;
+    height: 5px;
     width: 100%;
     cursor: pointer;
     background-color: #d0d8e6;
@@ -281,7 +284,8 @@ body {
   }
   @media screen and (max-width: 576px), (max-height: 500px) {
     .album-info {
-      padding-right: 30px;
+      font-size: 8px;
+      padding-right: 9px;
     }
   }
   .album-info__name {
@@ -290,57 +294,10 @@ body {
     margin-bottom: 12px;
     line-height: 1.3em;
   }
-  @media screen and (max-width: 576px), (max-height: 500px) {
+  @media screen and (max-width: 900px), (max-height: 900px) {
     .album-info__name {
-      font-size: 18px;
+      font-size: 9px;
       margin-bottom: 9px;
-    }
-  }
-  .album-info__track {
-    font-weight: 400;
-    font-size: 20px;
-    opacity: 0.7;
-    line-height: 1.3em;
-    min-height: 52px;
-  }
-  @media screen and (max-width: 576px), (max-height: 500px) {
-    .album-info__track {
-      font-size: 18px;
-      min-height: 50px;
-    }
-  }
-  
-  .github-btn {
-    position: absolute;
-    right: 40px;
-    bottom: 50px;
-    text-decoration: none;
-    padding: 15px 25px;
-    border-radius: 4px;
-    box-shadow: 0px 4px 30px -6px rgba(36, 52, 70, 0.65);
-    background: #24292e;
-    color: #fff;
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-size: 16px;
-    transition: all 0.3s ease-in-out;
-  }
-  @media screen and (min-width: 500px) {
-    .github-btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0px 17px 20px -6px rgba(36, 52, 70, 0.36);
-    }
-  }
-  @media screen and (max-width: 700px) {
-    .github-btn {
-      position: relative;
-      bottom: auto;
-      right: auto;
-      margin-top: 20px;
-    }
-    .github-btn:active {
-      transform: scale(1.1);
-      box-shadow: 0px 17px 20px -6px rgba(36, 52, 70, 0.36);
     }
   }
   
