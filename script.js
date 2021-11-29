@@ -13,7 +13,7 @@ new Vue({
                     //temp holder
                     name: "The Westerhout Family,
                     artist: "Westerhout",
-                    cover: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/img/1.jpg",
+                    cover: "image.jpg",
                     source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/1.mp3",
                     url: "https://www.youtube.com/watch?v=z3wAjJXbYzA",
                     favorited: false
