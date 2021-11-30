@@ -11,11 +11,11 @@ new Vue({
             tracks: [
                 {
                     //temp holder
-                    name: "The Westerhout Family,
+                    name: "Westerhout Family",
                     artist: "Westerhout",
                     cover: "image.jpg",
-                    source: "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/1.mp3",
-                    url: "https://www.youtube.com/watch?v=z3wAjJXbYzA",
+                    source: "westerhout_audio.wav", //waiting for audio
+                    url: "",
                     favorited: false
                 },
             ],
