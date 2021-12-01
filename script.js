@@ -14,7 +14,7 @@ new Vue({
                     name: "Westerhout Family",
                     artist: "Westerhout",
                     cover: "image.jpg",
-                    source: "westerhout_audio.wav", //waiting for audio
+                    source: "https://cdn.glitch.me/a1f1711d-0847-4ca2-822e-1f6dd0513009%2FSwordSound.wav?v=1638339868505", 
                     url: "",
                     favorited: false
                 },
