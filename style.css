@@ -341,15 +341,3 @@ body {
     pointer-events: none;
     opacity: 0;
   }
-
-  /* (A) WRONG ORIENTATION - SHOW MESSAGE HIDE CONTENT */
-@media only screen and (orientation:landscape) {
-  #turn { display:block; }
-  #bodyContent { display:none; }
-}
- 
-/* (B) CORRECT ORIENTATION - SHOW CONTENT HIDE MESSAGE */
-@media only screen and (orientation:portrait) {
-  #turn { display:none; }
-  #bodyContent { display:block; }
-}
