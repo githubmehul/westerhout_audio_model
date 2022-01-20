@@ -342,7 +342,7 @@ body {
     opacity: 0;
   }
 
-@media only screen and (orientation: landscape){
+@media only screen and (orientation: portrait){
   body{
     transform: rotate(90deg);
   }
