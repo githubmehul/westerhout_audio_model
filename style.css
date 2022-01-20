@@ -341,3 +341,13 @@ body {
     pointer-events: none;
     opacity: 0;
   }
+
+ /*TEST for all screens*/
+ #content {display: none;}
+
+ /*TEST for when orientation is in portrait mode*/
+ @media all and (orientation:portrait){
+   #content{
+     display: block;
+   }
+ }
