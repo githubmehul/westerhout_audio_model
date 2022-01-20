@@ -341,3 +341,9 @@ body {
     pointer-events: none;
     opacity: 0;
   }
+
+@media only screen and (orientation: landscape){
+  body{
+    transform: rotate(90deg);
+  }
+}
