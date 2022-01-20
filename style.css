@@ -343,11 +343,11 @@ body {
   }
 
  /*TEST for all screens*/
- #content {display: none;}
+ body {display: none;}
 
  /*TEST for when orientation is in portrait mode*/
  @media all and (orientation:portrait){
-   #content{
+   body{
      display: block;
    }
  }
