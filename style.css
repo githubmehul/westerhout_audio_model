@@ -7,7 +7,7 @@ body {
     box-sizing: border-box;
   }
   
-  .icon {
+  .icon { 
     display: inline-block;
     width: 10vw;
     height: 10vh;
@@ -342,8 +342,12 @@ body {
     opacity: 0;
   }
 
-@media only screen and (orientation: portrait){
-  html{
-    transform: rotate(90deg);
+  /*for all screens*/
+  html {display: none;}
+
+  /*only when orientation is in landscape*/
+  @media all and (orientation: landscape){
+    html {
+      display: block;
+    }
   }
-}
