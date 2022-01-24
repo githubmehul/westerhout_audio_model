@@ -346,7 +346,7 @@ body {
   html {display: none;}
 
   /*only when orientation is in landscape*/
-  @media all and (orientation: landscape){
+  @media only screen and (orientation: landscape){
     html {
       display: block;
     }
