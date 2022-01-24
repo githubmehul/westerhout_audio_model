@@ -341,13 +341,3 @@ body {
     pointer-events: none;
     opacity: 0;
   }
-
-  /*for all screens*/
-  html {display: none;}
-
-  /*only when orientation is in landscape*/
-  @media only screen and (orientation: landscape){
-    html {
-      display: block;
-    }
-  }
