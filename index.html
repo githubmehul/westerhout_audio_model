@@ -21,12 +21,9 @@
 </head>
 
 <body style='margin : 0px; overflow: hidden;'>
-    
-    <div class="alert">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-        Please change device orientation to landscape!
-      </div> 
-
+    <script>
+        alert("Please change device orientation to landscape!");
+    </script>
     <a-scene embedded arjs="debugUIEnabled: false; trackingMethod: best;"
 			 renderer="logarithmicDepthBuffer: true"
              gesture-detector>
