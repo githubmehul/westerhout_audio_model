@@ -14,7 +14,7 @@
 
     	<meta charset="UTF-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     	<title>Argumented Reality Interface</title>
     	<!--link to css-->
     	<link type="text/css" rel="stylesheet" href="style.css">  <!--connect to css file-->
@@ -30,6 +30,8 @@
 
         <!-- define a marker to detect the 3d object-->
         <a-marker-camera preset='custom' type='pattern' url='https://raw.githubusercontent.com/githubmehul/westerhout_audio_model/main/Pattern/pattern-QRWesterhout%20(1).patt'></a-marker-camera>
+
+        <a-box id="loadingEl"></a-box>
 
 		<a-entity gltf-model="https://raw.githubusercontent.com/githubmehul/Augmented-Reality-Implementation/main/Sheath%203D%20model/sheath.gltf"
 				  scale="0.1 0.1 0.1"
@@ -200,6 +202,15 @@
             </defs>
         </svg>
 	</a-scene>
+        <script>
+            AFRAME.registerComponent('foo', {
+                init: function() {
+                    this.el.addEventListener('model-loaded', e => {
+                        document.querySelector("#loadingEl").remove()
+                    })
+                }
+            })
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
         <script src="script.js"></script> <!--connect to javascript-->
 
