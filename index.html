@@ -31,8 +31,6 @@
         <!-- define a marker to detect the 3d object-->
         <a-marker-camera preset='custom' type='pattern' url='https://raw.githubusercontent.com/githubmehul/westerhout_audio_model/main/Pattern/pattern-QRWesterhout%20(1).patt'></a-marker-camera>
 
-        <a-box id="loadingEl"></a-box>
-
 		<a-entity gltf-model="https://raw.githubusercontent.com/githubmehul/Augmented-Reality-Implementation/main/Sheath%203D%20model/sheath.gltf"
 				  scale="0.1 0.1 0.1"
 				  position="0.092 0.104 -0.069"
@@ -202,13 +200,6 @@
             </defs>
         </svg>
 	</a-scene>
-        <script>
-            const sceneEl = document.querySelector('a-scene');
-            sceneEl.addEventListener('loaded', () => {
-            sceneEl.camera = new THREE.PerspectiveCamera();
-            scene.add( camera );
-            });
-        </script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
         <script src="script.js"></script> <!--connect to javascript-->
 
