@@ -10,14 +10,26 @@
 	<!-- include ar.js for A-Frame -->
 	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 	<!-- include gesture.js for 3D model interactivity -->
-    	<script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+    <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
 
-    	<meta charset="UTF-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    	<title>Argumented Reality Interface</title>
-    	<!--link to css-->
-    	<link type="text/css" rel="stylesheet" href="style.css">  <!--connect to css file-->
+    <title>Argumented Reality Interface</title>
+    <!--link to css-->
+    <link type="text/css" rel="stylesheet" href="style.css">  
+
+    <script>
+        AFRAME.registerComponent('loader', {
+          init: function() {
+            let loader = document.querySelector("#loadingEl")
+            this.el.addEventListener('model-loaded', e => {
+              console.log('loaded')
+              loader.setAttribute("visible", "false")
+            })
+          }
+        })
+    </script>
 </head>
 
 <body style='margin : 0px; overflow: hidden;'>
@@ -30,14 +42,15 @@
 
         <!-- define a marker to detect the 3d object-->
         <a-marker-camera preset='custom' type='pattern' url='https://raw.githubusercontent.com/githubmehul/westerhout_audio_model/main/Pattern/pattern-QRWesterhout%20(1).patt'></a-marker-camera>
-
-		<a-entity gltf-model="https://raw.githubusercontent.com/githubmehul/Augmented-Reality-Implementation/main/Sheath%203D%20model/sheath.gltf"
+        
+        <a-entity gltf-model="https://raw.githubusercontent.com/githubmehul/Augmented-Reality-Implementation/main/Sheath%203D%20model/sheath.gltf"
 				  scale="0.1 0.1 0.1"
 				  position="0.092 0.104 -0.069"
 				  rotation="-90 0 0"
                   class="clickable"
                   gesture-handler
 				  ></a-entity>
+
 		<a-entity gltf-model="https://cdn.glitch.me/a1f1711d-0847-4ca2-822e-1f6dd0513009%2FSword.gltf?v=1636947243511"
 				  scale="0.03 0.03 0.03"
 				  position="-0.13 0.112 -0.002"
@@ -201,6 +214,16 @@
             </defs>
         </svg>
 	</a-scene>
+
+    <script>
+        // Workaround for an AR.js bug (https://github.com/jeromeetienne/AR.js/issues/410)
+        const sceneEl = document.querySelector('a-scene');
+        sceneEl.addEventListener('loaded', () => {
+          sceneEl.camera = new THREE.PerspectiveCamera();
+          scene.add( camera );
+        });
+     </script>
+
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
         <script src="script.js"></script> <!--connect to javascript-->
 
